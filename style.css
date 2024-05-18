@@ -1,0 +1,156 @@
+/* CSS default reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ---------------------------------------- */
+
+/* Fonts */
+@font-face {
+    font-family: 'plexifont_bvregular';
+    src: url('./fonts/plexifont-webfont.woff2') format('woff2'),
+         url('./fonts/plexifont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lillyregular';
+    src: url('./fonts/lilly__-webfont.woff2') format('woff2'),
+         url('./fonts/lilly__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'de_valenciaregular';
+    src: url('./fonts/de_valencia_beta-webfont.woff2') format('woff2'),
+         url('./fonts/de_valencia_beta-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bubbler_oneregular';
+    src: url('./fonts/bubblerone-regular-webfont.woff2') format('woff2'),
+         url('./fonts/bubblerone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ---------------------------------------- */
+
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+.image-sidebar {
+    width: 500px;
+    background-color: aqua;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid red;
+}
+
+.logo h1 {
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: lighter;
+    font-family: 'plexifont_bvregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.logo img {
+    width: 75px;
+}
+
+/* ---------------------------------------- */
+
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+.form-section p, h2 {
+    font-size: 18px;
+    font-family: 'lillyregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.paragraph {
+    padding: 150px 0 100px 50px;
+    background-color: lightblue;
+}
+
+.form-container {
+    flex: 1;
+    padding: 15px 0 0 50px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+ 
+    margin: 20px 0;
+    background-color: lightblue;
+}
+
+.form-row {
+    display: flex;
+    gap: 50px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 14px;
+    font-family: 'bubbler_oneregular';
+    letter-spacing: 0.1em;
+}
+
+input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

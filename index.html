@@ -9,13 +9,14 @@
 </head>
 
 <body>
-    <section class="image-sidebar">
+    <aside class="image-sidebar">
         <div class="logo">
+            <img src="./img/odin-lined.png" alt="T.O.P logo">
             <h1>ODIN</h1>
         </div>
-    </section>
+    </aside>
 
-    <section class="main-section">
+    <main class="form-section">
         <div class="paragraph">
             <p>This is not a real online service! You know you need something like this in your life to help you realise
                 your deepest dreams. Sign up <em>now</em> to get started.</p>
@@ -23,31 +24,46 @@
         </div>
 
         <div class="form-container">
-            <h3>Let's do this!</h3>
+            <h2>Let's do this!</h2>
             <form class="signup-form" action="">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" required>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
 
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" required>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="tel" id="phone-number" name="phone-number" required>
+                    </div>
+                </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone-number" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="confirm-pwd">Confirm Password</label>
-                <input type="password" id="confirm-pwd" required>
+                <div class="form-row">
+                    <div class="form-input">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-input">
+                        <label for="confirm-pwd">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-pwd" required>
+                    </div>
+                </div>
 
                 <button type="submit">Create Account</button>
             </form>
             <div>Already have an account? <a href="">Log in</a></div>
         </div>
-    </section>
+    </main>
 </body>
 
 </html>

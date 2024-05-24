@@ -134,7 +134,16 @@ input {
     width: 250px;
     padding: 8px;
     border: 1px solid #E5E7EB;
-    border-radius: 3px;;
+    border-radius: 3px;
+}
+
+input:focus {
+    border: 1px solid #0000ff;
+    box-shadow: 3px 3px 3px teal;
+}
+
+input:invalid {
+    border: 1px solid #ff0000;
 }
 
 button {

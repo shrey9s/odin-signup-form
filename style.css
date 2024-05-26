@@ -69,7 +69,6 @@ body {
 }
 
 .logo, .attributions {
-    color: #03e001;
     background-color: rgb(0, 0, 0, 0.5);   
 }
 
@@ -83,6 +82,7 @@ body {
 }
 
 .logo h1 {
+    color: #06f602;
     font-size: 95px;
     font-family:'brizelregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -92,6 +92,7 @@ body {
 }
 
 .attributions {
+    color: #03e001;
     padding: 10px 5px;
 }
 
@@ -180,7 +181,7 @@ button {
     border-radius: 5px;
     padding: 15px 50px;
     font-size: 16px;
-    background-color:#03e001;
+    background-color: #06f602;
     box-shadow: 4px 4px 2px #0c5102;
     cursor: pointer;
 }

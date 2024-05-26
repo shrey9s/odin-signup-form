@@ -71,7 +71,7 @@ body {
     justify-content: center;
     gap: 15px;
     padding: 15px 0;
-    margin-top: 173px;
+    margin-top: 174px;
 }
 
 .logo h1 {
@@ -107,12 +107,17 @@ body {
 }
 
 .paragraph {
-    padding: 130px 50px 70px;
+    padding: 110px 50px 50px;
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
 }
 
+.paragraph p:last-child {
+    margin-top: 15px;
+}
+
 .form-container {
-    padding: 20px 50px 0;
+    flex: 1;
+    padding: 30px 50px 0;
 }
 
 .signup-form {

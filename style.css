@@ -13,70 +13,83 @@ html {
     margin: 0;
     padding: 0;
 }
+
 /* ---------------------------------------- */
 
 /* Fonts */
 @font-face {
-    font-family: 'plexifont_bvregular';
-    src: url('./fonts/plexifont-webfont.woff2') format('woff2'),
-         url('./fonts/plexifont-webfont.woff') format('woff');
+    font-family: 'brizelregular';
+    src: url('./fonts/brizel-webfont.woff2') format('woff2'),
+         url('./fonts/brizel-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'lillyregular';
-    src: url('./fonts/lilly__-webfont.woff2') format('woff2'),
-         url('./fonts/lilly__-webfont.woff') format('woff');
+    font-family: 'alegreyaregular';
+    src: url('./fonts/alegreya-regular-webfont.woff2') format('woff2'),
+         url('./fonts/alegreya-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'de_valenciaregular';
-    src: url('./fonts/de_valencia_beta-webfont.woff2') format('woff2'),
-         url('./fonts/de_valencia_beta-webfont.woff') format('woff');
+    font-family: 'alegreyabold';
+    src: url('./fonts/alegreya-bold-webfont.woff2') format('woff2'),
+         url('./fonts/alegreya-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'bubbler_oneregular';
-    src: url('./fonts/bubblerone-regular-webfont.woff2') format('woff2'),
-         url('./fonts/bubblerone-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 /* ---------------------------------------- */
-
 
 body {
     height: 100vh;
     display: flex;
+    font-family: 'alegreyaregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+/* ---------------------------------------- */
+
 .image-sidebar {
-    width: 500px;
-    background-color: aqua;
+    width: 35%;
+    background-image: url(./img/peacock-bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo, .attributions {
+    color: #03e001;
+    background-color: rgb(0, 0, 0, 0.5);   
 }
 
 .logo {
     display: flex;
     align-items: center; 
     justify-content: center;
-    gap: 10px;
-    border: 1px solid red;
+    gap: 15px;
+    padding: 15px 0;
+    margin-top: 173px;
 }
 
 .logo h1 {
-    color: #ffffff;
-    font-size: 100px;
-    font-weight: lighter;
-    font-family: 'plexifont_bvregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 95px;
+    font-family:'brizelregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .logo img {
-    width: 75px;
+    width: 70px;
+}
+
+.attributions {
+    padding: 10px 5px;
+}
+
+.attributions a {
+    color:#06f602;
+    font-style: italic;
 }
 
 /* ---------------------------------------- */
@@ -85,22 +98,21 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    background: linear-gradient(#16b511, #03e001, #0492e9, #03cdd8, #eabbd2);
 }
 
 .form-section p, h2 {
-    font-size: 18px;
-    font-family: 'lillyregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 20px;
+    font-family: 'alegreyabold', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .paragraph {
-    padding: 150px 0 100px 50px;
-    background-color: lightblue;
+    padding: 130px 50px 70px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
 }
 
 .form-container {
-    flex: 1;
-    padding: 15px 0 0 50px;
+    padding: 20px 50px 0;
 }
 
 .signup-form {
@@ -108,9 +120,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
- 
     margin: 20px 0;
-    background-color: lightblue;
 }
 
 .form-row {
@@ -124,9 +134,12 @@ body {
     align-items: flex-start;
 }
 
+label, button {
+    font-family: 'alegreyabold', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 label {
     font-size: 14px;
-    font-family: 'bubbler_oneregular';
     letter-spacing: 0.1em;
 }
 
@@ -135,11 +148,14 @@ input {
     padding: 8px;
     border: 1px solid #E5E7EB;
     border-radius: 3px;
+    font-size: 16px;
+    font-family: inherit;
 }
 
 input:focus {
     border: 1px solid #0000ff;
-    box-shadow: 3px 3px 3px teal;
+    background-color: rgb(229, 229, 229);
+    box-shadow: 5px 5px 4px #0c4eac;
 }
 
 input:invalid {
@@ -149,10 +165,20 @@ input:invalid {
 button {
     border: none;
     border-radius: 5px;
-    padding: 10px 50px;
+    padding: 15px 50px;
+    font-size: 16px;
+    background-color:#03e001;
+    box-shadow: 4px 4px 2px #0c5102;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #16b511;
+}
 
+button:active {
+    transform: translate(2px, 2px);
+}
 
 
 

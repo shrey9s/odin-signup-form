@@ -1,21 +1,3 @@
-/* CSS default reset */
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* ---------------------------------------- */
-
 /* Fonts */
 @font-face {
     font-family: 'brizelregular';
@@ -49,23 +31,41 @@ html {
     font-style: normal;
 }
 
-/* ---------------------------------------- */
+/* CSS default reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------ */
 
 body {
+    display: grid;
+    grid-template-columns: 1fr  3fr;
+    grid-template-rows: 1fr 3fr;
+
     height: 100vh;
-    display: flex;
     font-family: 'alegreyaregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-/* ---------------------------------------- */
-
 .image-sidebar {
-    width: 35%;
-    background-image: url(./img/peacock-bg.jpg);
-    background-size: cover;
+    grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    background-image: url(./img/peacock-bg.jpg);
+    background-size: cover;
 }
 
 .logo, .attributions {
@@ -78,7 +78,6 @@ body {
     justify-content: center;
     gap: 15px;
     padding: 15px 0;
-    margin-top: 174px;
 }
 
 .logo h1 {
@@ -104,9 +103,6 @@ body {
 /* ---------------------------------------- */
 
 .form-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     background: linear-gradient(#16b511, #03e001, #0492e9, #03cdd8, #eabbd2);
 }
 
@@ -115,17 +111,16 @@ body {
     font-family: 'alegreyabold', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.paragraph {
-    padding: 110px 50px 50px;
+.message-section {
+    /*padding: 110px 50px 50px;*/
     box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
 }
 
-.paragraph p:last-child {
+.message-section p:last-child {
     margin-top: 15px;
 }
 
-.form-container {
-    flex: 1;
+.form-section {
     padding: 30px 50px 0;
 }
 
@@ -160,8 +155,9 @@ label {
 input {
     width: 250px;
     padding: 8px;
-    border: 1px solid #E5E7EB;
     border-radius: 3px;
+    border: 1px solid #E5E7EB;
+
     font-size: 16px;
     font-family: inherit;
 }

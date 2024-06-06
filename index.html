@@ -7,7 +7,7 @@
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
-    
+
 </head>
 
 <body>
@@ -17,58 +17,64 @@
             <h1>Mayur</h1>
         </div>
         <div class="attributions">
-            <p>Photo by <a href="https://unsplash.com/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David Clode</a> on <a href="https://unsplash.com/photos/green-and-blue-feather-close-up-photography-p8qVtndXPWY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            <p>Photo by <a
+                    href="https://unsplash.com/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David
+                    Clode</a> on <a
+                    href="https://unsplash.com/photos/green-and-blue-feather-close-up-photography-p8qVtndXPWY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             </p>
-            <a href="https://www.flaticon.com/free-icons/peacock" title="peacock icons">Peacock icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/peacock" title="peacock icons">Peacock icons created by Freepik
+                - Flaticon</a>
         </div>
     </aside>
 
-    <main class="form-section">
-        <div class="paragraph">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus harum eius nobis animi omnis quibusdam praesentium quod veritatis voluptates et atque alias nihil, laborum nam quo, quasi, ea dolore sint.</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-        </div>
+    <section class="message-section">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus harum eius nobis animi omnis quibusdam
+            praesentium quod veritatis voluptates et atque alias nihil, laborum nam quo, quasi, ea dolore sint.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
 
-        <div class="form-container">
-            <h2>Create an account for free!</h2>
-            <form class="signup-form" action="">
-                <div class="form-row">
-                    <div class="form-input">
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
-                    </div>
-                    <div class="form-input">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name">
-                    </div>
+    <section class="form-section">
+        <h2>Create an account for free!</h2>
+        <form class="signup-form" action="">
+            <div class="form-row">
+                <div class="form-input">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name" required>
                 </div>
+                <div class="form-input">
+                    <label for="last-name">LAST NAME</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-input">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-input">
+                    <label for="phone-number">PHONE NUMBER</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-input">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div class="form-input">
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number">
-                    </div>
+            <div class="form-row">
+                <div class="form-input">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
+                <div class="form-input">
+                    <label for="confirm-pwd">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-pwd" required>
+                </div>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-input">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-input">
-                        <label for="confirm-pwd">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-pwd" required>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn">Create Account</button>
-            </form>
-            <div>Already have an account? <a href="">Log in</a></div>
-        </div>
-    </main>
+            <button type="submit" class="submit-btn">Create Account</button>
+        </form>
+        
+        <div>Already have an account? <a href="">Log in</a></div>
+    </section>
+
 </body>
 
 </html>

@@ -51,7 +51,7 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: 1fr  3fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 3fr;
 
     height: 100vh;
@@ -121,7 +121,7 @@ body {
 }
 
 .form-section {
-    padding: 30px 50px 0;
+    /*padding: 30px 50px 0;*/
 }
 
 .signup-form {
@@ -138,6 +138,7 @@ body {
 
 .form-input {
     display: grid;
+    row-gap: 3px;
 }
 
 .form-input:last-of-type {

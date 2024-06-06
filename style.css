@@ -125,22 +125,26 @@ body {
 }
 
 .signup-form {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 20px;*/
+
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 20px 50px;
     margin: 20px 0;
 }
 
-.form-row {
-    display: flex;
-    gap: 50px;
+.form-input {
+    display: grid;
 }
 
-.form-input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.form-input:last-of-type {
+    grid-column: 1 / -1;
+    justify-self: start;
+    grid-template-columns: auto 1fr;
+    column-gap: 8px;
 }
 
 label, button {
@@ -152,7 +156,7 @@ label {
     letter-spacing: 0.1em;
 }
 
-input {
+input, select {
     width: 250px;
     padding: 8px;
     border-radius: 3px;
@@ -162,10 +166,18 @@ input {
     font-family: inherit;
 }
 
+input[type="checkbox"] {
+    width: auto;
+}
+
 input:focus {
     border: 1px solid #0000ff;
     background-color: rgb(229, 229, 229);
     box-shadow: 5px 5px 4px #0c4eac;
+}
+
+input[type="checkbox"]:focus {
+    box-shadow: none;
 }
 
 input:invalid {

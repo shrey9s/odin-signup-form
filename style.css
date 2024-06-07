@@ -1,37 +1,5 @@
 /* Fonts */
 @font-face {
-    font-family: 'brizelregular';
-    src: url('./fonts/brizel-webfont.woff2') format('woff2'),
-         url('./fonts/brizel-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'alegreyaregular';
-    src: url('./fonts/alegreya-regular-webfont.woff2') format('woff2'),
-         url('./fonts/alegreya-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'alegreyabold';
-    src: url('./fonts/alegreya-bold-webfont.woff2') format('woff2'),
-         url('./fonts/alegreya-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'alegreyaitalic';
-    src: url('./fonts/alegreya-italic-webfont.woff2') format('woff2'),
-         url('./fonts/alegreya-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'pixelify_sans';
     src: url('./fonts/pixelifysans-variablefont_wght-webfont.woff2') format('woff2'),
         url('./fonts/pixelifysans-variablefont_wght-webfont.woff') format('woff');
@@ -86,7 +54,7 @@ body {
 
 .logo h1 {
     font-size: 64px;
-    color: #d5eff8;
+    color: #d5eff8; /* fallback */
     -webkit-text-fill-color: #93d4f4;
     -webkit-text-stroke: 0.1px #3cb3f8;
     line-height: 0.9;
@@ -121,7 +89,7 @@ body {
 
 .message p:last-child {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* -------------------- */
@@ -167,7 +135,7 @@ body {
     row-gap: 3px;
 }
 
-.form-field:last-of-type {
+.checkbox {
     grid-column: 1 / -1;
     justify-self: start;
     grid-template-columns: auto 1fr;
@@ -183,6 +151,7 @@ input, select {
     padding: 8px;
     border-radius: 5px;
     border: 2px solid #c98d4f;
+    background-color: seashell;
 
     font-size: 16px;
     font-family: inherit;
@@ -223,7 +192,7 @@ button {
 }
 
 button:enabled:hover {
-    color: #ffffff;
+    color: seashell;
     background-color: #93d4f4;
 }
 
@@ -233,12 +202,13 @@ button:enabled:active {
 }
 
 .error-msg {
-    margin-top: -10px;
-    color: #ffffff;
-    font-family: 'alegreyaitalic', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    grid-column: 1 / -1;
+    justify-self: center;
+    color: seashell;
 }
 
 /* Pixel borders generated using https://pixelcorners.lukeb.co.uk - built by Luke Bonaccorsi */
+
 .pixel-corners,
 .pixel-corners--wrapper {
   clip-path: polygon(0px calc(100% - 32px),
@@ -500,12 +470,3 @@ button:enabled:active {
 .pixel-corners-2::after {
   margin: 2px;
 }
-
-
-
-
-
-
-
-
-

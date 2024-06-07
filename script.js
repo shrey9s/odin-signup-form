@@ -1,5 +1,5 @@
 const form = document.querySelector(".signup-form");
-const submitBtn = document.querySelector(".submit-btn");
+const checkboxField = document.querySelector(".checkbox");
 const passwordField = document.querySelector("#password");
 const confirmPasswordField = document.querySelector("#confirm-pwd");
 
@@ -7,7 +7,7 @@ let password, confirmedPassword;
 
 const errorMsg = document.createElement("div");
 errorMsg.classList.add("error-msg");
-errorMsg.textContent = "* Passwords do not match!";
+errorMsg.textContent = "Passwords do not match!";
 
 confirmPasswordField.addEventListener("blur", () => {
     password = passwordField.value;
@@ -25,15 +25,15 @@ passwordField.addEventListener("blur", () => {
 
 function confirmPassword() {
     if (password !== confirmedPassword) {
-        form.insertBefore(errorMsg, submitBtn);
-        confirmPasswordField.style.border = "1px solid #ff0000";
-        submitBtn.disabled = true;
+        form.insertBefore(errorMsg, checkboxField);
+        confirmPasswordField.style.border = "2px solid #ff0000";
+        checkboxField.disabled = true;
     }
     else {
         if (document.querySelector(".error-msg")) {
             form.removeChild(errorMsg);
             confirmPasswordField.style.border = "";
-            submitBtn.disabled = false;
+            checkboxField.disabled = false;
         }
     }
 }

@@ -31,6 +31,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'pixelify_sans';
+    src: url('./fonts/pixelifysans-variablefont_wght-webfont.woff2') format('woff2'),
+        url('./fonts/pixelifysans-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* CSS default reset */
 html {
     box-sizing: border-box;
@@ -53,75 +61,89 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 3fr;
-
+    
     height: 100vh;
-    font-family: 'alegreyaregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'pixelify_sans', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
 }
 
 .image-sidebar {
     grid-row: 1 / 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background-image: url(./img/peacock-bg.jpg);
+    background-image: url(./img/pixel-ocean-waves.gif);
     background-size: cover;
-}
-
-.logo, .attributions {
-    background-color: rgb(0, 0, 0, 0.5);   
 }
 
 .logo {
     display: flex;
-    align-items: center; 
-    justify-content: center;
-    gap: 15px;
-    padding: 15px 0;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;
+
+    padding: 25px;
+    margin: 20px 20px 0;
+    background-color: #ecc284;
 }
 
 .logo h1 {
-    color: #06f602;
-    font-size: 95px;
-    font-family:'brizelregular', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 64px;
+    color: #d5eff8;
+    -webkit-text-fill-color: #93d4f4;
+    -webkit-text-stroke: 0.1px #3cb3f8;
+    line-height: 0.9;
 }
 
 .logo img {
-    width: 70px;
-}
-
-.attributions {
-    color: #03e001;
-    padding: 10px 5px;
-}
-
-.attributions a {
-    color:#06f602;
-    font-style: italic;
+    width: 72px;
 }
 
 /* ---------------------------------------- */
 
-.form-section {
-    background: linear-gradient(#16b511, #03e001, #0492e9, #03cdd8, #eabbd2);
-}
-
-.form-section p, h2 {
-    font-size: 20px;
-    font-family: 'alegreyabold', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 .message-section {
-    /*padding: 110px 50px 50px;*/
-    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #ecfbff;
+    line-height: 1.5;
+
+    background-color: #93d4f4;
+    box-shadow: 5px 5px 4px #a79476;
+    z-index: 1;
 }
 
-.message-section p:last-child {
-    margin-top: 15px;
+.message {
+    padding: 80px 40px;
+    background-color: #3cb3f8;
 }
+
+.message p:last-child {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/* -------------------- */
 
 .form-section {
-    /*padding: 30px 50px 0;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    
+    padding: 30px 50px 0;
+    background-color: #fbdfb1; /*linear-gradient(#e4c484, #eccc97, #fce4bc);*/
+    color: #7f4307;
+}
+
+.form-section p {
+    margin-top: 30px;
+    margin-left: 32px;
+    font-size: 14px;
+}
+
+.form-section > div {
+    margin-left: 32px;
 }
 
 .signup-form {
@@ -132,36 +154,35 @@ body {
 
     display: grid;
     grid-template-columns: repeat(2, 250px);
-    gap: 20px 50px;
-    margin: 20px 0;
+    gap: 25px 50px;
+
+    /*width: 600px;*/
+    padding: 50px;
+    margin: 5px 0 15px;
+    background-color: #ecc284;
 }
 
-.form-input {
+.form-field {
     display: grid;
     row-gap: 3px;
 }
 
-.form-input:last-of-type {
+.form-field:last-of-type {
     grid-column: 1 / -1;
     justify-self: start;
     grid-template-columns: auto 1fr;
     column-gap: 8px;
 }
 
-label, button {
-    font-family: 'alegreyabold', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 label {
-    font-size: 14px;
-    letter-spacing: 0.1em;
+    font-size: 18px;
 }
 
 input, select {
     width: 250px;
     padding: 8px;
-    border-radius: 3px;
-    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    border: 2px solid #c98d4f;
 
     font-size: 16px;
     font-family: inherit;
@@ -172,35 +193,43 @@ input[type="checkbox"] {
 }
 
 input:focus {
-    border: 1px solid #0000ff;
-    background-color: rgb(229, 229, 229);
-    box-shadow: 5px 5px 4px #0c4eac;
+    background-color:#fce4bc;
+    box-shadow: 6px 6px 3px #a98044;
 }
 
 input[type="checkbox"]:focus {
     box-shadow: none;
 }
 
-input:invalid {
+/*input:invalid {
     border: 1px solid #ff0000;
-}
+}*/
 
 button {
+    grid-column: 1 / -1;
+    justify-self: center;
+
     border: none;
     border-radius: 5px;
     padding: 15px 50px;
-    font-size: 16px;
-    background-color: #06f602;
-    box-shadow: 4px 4px 2px #0c5102;
+    
+    font-size: 20px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ecfbff;
+    background-color: #3cb3f8;
+    box-shadow: 4px 4px #2774a1;
     cursor: pointer;
 }
 
 button:enabled:hover {
-    background-color: #16b511;
+    color: #ffffff;
+    background-color: #93d4f4;
 }
 
 button:enabled:active {
-    transform: translate(2px, 2px);
+    transform: translate(1px, 2px);
+    box-shadow: 5px 6px #2774a1;
 }
 
 .error-msg {
@@ -209,8 +238,268 @@ button:enabled:active {
     font-family: 'alegreyaitalic', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+/* Pixel borders generated using https://pixelcorners.lukeb.co.uk - built by Luke Bonaccorsi */
+.pixel-corners,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 32px),
+    8px calc(100% - 32px),
+    8px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px 100%,
+    calc(100% - 32px) 100%,
+    calc(100% - 32px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 32px),
+    100% calc(100% - 32px),
+    100% 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 0px,
+    32px 0px,
+    32px 8px,
+    16px 8px,
+    16px 16px,
+    8px 16px,
+    8px 32px,
+    0px 32px);
+  position: relative;
+}
+.pixel-corners {
+  border: 8px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(8px 32px,
+    16px 32px,
+    16px 16px,
+    32px 16px,
+    32px 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 32px),
+    8px calc(100% - 32px));
+}
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 32px),
+    8px calc(100% - 32px),
+    8px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px 100%,
+    calc(100% - 32px) 100%,
+    calc(100% - 32px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 32px),
+    100% calc(100% - 32px),
+    100% 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 0px,
+    32px 0px,
+    32px 8px,
+    16px 8px,
+    16px 16px,
+    8px 16px,
+    8px 32px,
+    0px 32px,
+    0px 50%,
+    8px 50%,
+    8px 32px,
+    16px 32px,
+    16px 16px,
+    32px 16px,
+    32px 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 32px),
+    8px calc(100% - 32px),
+    8px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:#c98d4f;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners::after {
+  margin: 2px;
+}
 
+/* -------------------------------------------- */
 
+.pixel-corners-2,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 32px),
+    8px calc(100% - 32px),
+    8px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px 100%,
+    calc(100% - 32px) 100%,
+    calc(100% - 32px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 32px),
+    100% calc(100% - 32px),
+    100% 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 0px,
+    32px 0px,
+    32px 8px,
+    16px 8px,
+    16px 16px,
+    8px 16px,
+    8px 32px,
+    0px 32px);
+  position: relative;
+}
+.pixel-corners-2 {
+  border: 8px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners-2 {
+  display: block;
+  clip-path: polygon(8px 32px,
+    16px 32px,
+    16px 16px,
+    32px 16px,
+    32px 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 32px),
+    8px calc(100% - 32px));
+}
+.pixel-corners-2::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 32px),
+    8px calc(100% - 32px),
+    8px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px 100%,
+    calc(100% - 32px) 100%,
+    calc(100% - 32px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 32px),
+    100% calc(100% - 32px),
+    100% 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 0px,
+    32px 0px,
+    32px 8px,
+    16px 8px,
+    16px 16px,
+    8px 16px,
+    8px 32px,
+    0px 32px,
+    0px 50%,
+    8px 50%,
+    8px 32px,
+    16px 32px,
+    16px 16px,
+    32px 16px,
+    32px 8px,
+    calc(100% - 32px) 8px,
+    calc(100% - 32px) 16px,
+    calc(100% - 16px) 16px,
+    calc(100% - 16px) 32px,
+    calc(100% - 8px) 32px,
+    calc(100% - 8px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 32px),
+    calc(100% - 16px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 16px),
+    calc(100% - 32px) calc(100% - 8px),
+    32px calc(100% - 8px),
+    32px calc(100% - 16px),
+    16px calc(100% - 16px),
+    16px calc(100% - 32px),
+    8px calc(100% - 32px),
+    8px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #d5eff8;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners-2::after {
+  margin: 2px;
+}
 
 
 

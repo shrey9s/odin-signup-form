@@ -11,63 +11,59 @@
 
 <body>
     <aside class="image-sidebar">
-        <div class="logo">
-            <img src="./img/peacock-icon-3.png" alt="Peacock icon">
-            <h1>Mayur</h1>
-        </div>
-        <div class="attributions">
-            <p>Photo by <a
-                    href="https://unsplash.com/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David
-                    Clode</a> on <a
-                    href="https://unsplash.com/photos/green-and-blue-feather-close-up-photography-p8qVtndXPWY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            </p>
-            <a href="https://www.flaticon.com/free-icons/peacock" title="peacock icons">Peacock icons created by Freepik
-                - Flaticon</a>
+        <div class="logo pixel-corners">
+            <img src="./img/conch-shell.png" alt="Peacock icon">
+            <h1>Baarish Cove</h1>
         </div>
     </aside>
 
     <section class="message-section">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus harum eius nobis animi omnis quibusdam
-            praesentium quod veritatis voluptates et atque alias nihil, laborum nam quo, quasi, ea dolore sint.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="message pixel-corners-2">
+            <p>In this economy, who can afford that tropical getaway they truly deserve?</p>
+            <p>You can! With our tropical paradise simulator, Baarish Cove, that much deserved getaway is completely
+                free and only a few clicks away!</p>
+            <p>After all, why rest your eyes when you can rest your soul?</p>
+        </div>
     </section>
 
     <section class="form-section">
-        <h2>Create an account for free!</h2>
+        <h2>Join our Cove Community!</h2>
         <p>Required fields are indicated by <strong><span aria-label="required">*</span></strong></p>
-        <form class="signup-form" action="">
-            <div class="form-input">
+        <form class="signup-form pixel-corners" action="">
+            <div class="form-field">
                 <label for="first-name">
                     <span>FIRST NAME</span><strong><span title="required" aria-label="required">*</span></strong>
                 </label>
                 <input type="text" id="first-name" name="first-name" required>
             </div>
 
-            <div class="form-input">
+            <div class="form-field">
                 <label for="last-name">
                     <span>LAST NAME</span><strong><span title="required" aria-label="required">*</span></strong>
                 </label>
                 <input type="text" id="last-name" name="last-name" required>
             </div>
 
-            <div class="form-input">
+            <div class="form-field">
                 <label for="email">
                     <span>EMAIL</span><strong><span title="required" aria-label="required">*</span></strong>
                 </label>
                 <input type="email" id="email" name="email" required>
             </div>
 
-            <div class="form-input">
+            <div class="form-field">
                 <label for="phone-number">PHONE NUMBER</label>
                 <input type="tel" id="phone-number" name="phone-number">
             </div>
 
-            <div class="form-input">
-                <label for="dob">DATE OF BIRTH</label>
+            <div class="form-field">
+                <label for="dob">
+                    <span>DATE OF BIRTH</span><strong><span title="required" aria-label="required">*</span></strong>
+                </label>
                 <input type="date" id="dob" name="date-of-birth">
             </div>
 
-            <div class="form-input">
+            <div class="form-field">
                 <label for="gender">GENDER</label>
                 <select id="gender" name="gender">
                     <option value="male">Male</option>
@@ -76,26 +72,29 @@
                 </select>
             </div>
 
-            <div class="form-input">
+            <div class="form-field">
                 <label for="password">
                     <span>PASSWORD</span><strong><span title="required" aria-label="required">*</span></strong>
                 </label>
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <div class="form-input">
+            <div class="form-field">
                 <label for="confirm-pwd">
                     <span>CONFIRM PASSWORD</span><strong><span title="required" aria-label="required">*</span></strong>
                 </label>
                 <input type="password" id="confirm-pwd" required>
             </div>
 
-            <div class="form-input">
-                <input type="checkbox" id="sub-newsletter" name="sub-newsletter">
-                <label for="sub-newsletter">Subscribe to our monthly newsletter!</label>
+            <div class="form-field">
+                <input type="checkbox" id="agree-terms" name="agree-terms" required>
+                <label for="agree-terms">
+                    <span>I agree to the Terms & Conditions</span><strong><span title="required"
+                            aria-label="required">*</span></strong>
+                </label>
             </div>
 
-            <button type="submit" class="submit-btn">Create Account</button>
+            <button type="submit" class="submit-btn">JOIN</button>
         </form>
 
         <div>Already have an account? <a href="">Log in</a></div>

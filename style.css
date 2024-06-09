@@ -27,7 +27,7 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 3fr;
 
   height: 100vh;
@@ -59,7 +59,7 @@ body {
 }
 
 .logo h1 {
-  font-size: 64px;
+  font-size: 72px;
   color: #d5eff8;
   /* fallback */
   -webkit-text-fill-color: #93d4f4;
@@ -68,7 +68,7 @@ body {
 }
 
 .logo img {
-  width: 70px;
+  width: 85px;
 }
 
 /* --------------------------------------- */
@@ -78,7 +78,7 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  padding: 10px;
+  padding: 15px;
   background-color: #93d4f4;
   box-shadow: 5px 5px 4px #a79476;
   z-index: 1;
@@ -90,7 +90,7 @@ body {
 }
 
 .message {
-  padding: 100px 40px;
+  padding: 100px 65px;
   background-color: #3cb3f8;
 }
 
@@ -106,19 +106,19 @@ body {
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 30px 50px 0;
+  padding: 30px 30px 0;
   background-color: #fbdfb1;
   color: #7f4307;
 }
 
 .form-section p {
   margin-top: 30px;
-  margin-left: 32px;
+  margin-left: 82px;
   font-size: 14px;
 }
 
 .form-section>div {
-  margin-left: 32px;
+  margin-left: 82px;
 }
 
 .signup-form {
@@ -134,7 +134,7 @@ body {
 
   /*width: 600px;*/
   padding: 64px 42px;
-  margin: 5px 0 15px;
+  margin: 5px 0 15px 50px;
   background-color: #ecc284;
 }
 
@@ -370,12 +370,16 @@ button:enabled:active {
 
 @media only screen and (max-width: 1500px) {
   .logo {
-    gap: 5px;
+    gap: 0;
   }
 
   .logo h1 {
-    font-size: 60px;
+    font-size: 68px;
     text-align: center;
+  }
+
+  .logo img {
+    width: 100px;
   }
 
   .message-section {
@@ -384,7 +388,7 @@ button:enabled:active {
   }
 
   .message {
-    padding: 65px 25px;
+    padding: 65px 45px;
   }
 
   .message p:last-child {
@@ -392,7 +396,7 @@ button:enabled:active {
   }
 
   .form-section {
-    padding: 25px 35px 50px;
+    padding: 20px 20px 50px;
   }
 
   .form-section h2 {
@@ -401,18 +405,19 @@ button:enabled:active {
 
   .form-section p {
     margin-top: 20px;
-    margin-left: 25px;
+    margin-left: 64px;
     font-size: 13px;
   }
 
   .form-section>div {
+    margin-left: 64px;
     font-size: 15px;
-    margin-left: 25px;
   }
 
   .signup-form {
     gap: 20px 10px;
     padding: 42px 20px;
+    margin-left: 40px;
     margin-bottom: 10px;
   }
 
@@ -577,11 +582,46 @@ button:enabled:active {
 
 /* --------------------------------------- */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
+  .logo h1 {
+    font-size: 60x;
+  }
+
+  .logo img {
+    width: 85px;
+  }
+
+  .message-section,
+  .form-section h2 {
+    font-size: 20px;
+  }
+
+  .message {
+    padding: 45px 25px;
+  }
+
+  .message p:last-child {
+    font-size: 15px;
+  }
+
+  .form-section {
+    padding: 15px 15px 50px;
+  }
+
+  .form-section p {
+    margin-top: 15px;
+    margin-left: 50px;
+  }
+
+  .form-section>div {
+    margin-left: 50px;
+  }
+
   .signup-form {
     grid-template-columns: 1fr;
     row-gap: 24px;
     padding: 42px;
+    margin-left: 25px;
   }
 
   input,
